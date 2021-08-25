@@ -1,7 +1,10 @@
 log("testing");
+let caja = 32;
 function setup(){
   log("should work");
-  createCanvas(windowWidth, windowHeight);
+  let wid = int(windowWidth*0.8/caja)*caja;
+  let hei = int(windowHeight*0.8/caja)*caja;
+  createCanvas(windowWidth*0.8, windowHeight*0.8);
 };
 function draw(){
   log("Why not?");
