@@ -8,19 +8,21 @@ function setup(){
   createCanvas(wid, hei);
 };
 function draw(){
+  let kpr = 0;
   if (keyIsPressed){
     console.log(keyCode);
+    kpr = keyCode
   }
-  if (keyCode == 37 && curX>0){
+  if (kpr == 37 && curX>0){
     curX--;
   }
-  else if(keyCode == 38 && curY>0){
+  else if(kpr == 38 && curY>0){
     curY--;
   }
-  else if(keyCode == 39 && curX < int(displayWidth/caja)){
+  else if(kpr == 39 && curX < int(displayWidth/caja)){
     curX++;
   }
-  else if(keyCode == 40 && curY < int(displayHeight/caja)){
+  else if(kpr == 40 && curY < int(displayHeight/caja)){
     curY++;
   }
   background(0);
