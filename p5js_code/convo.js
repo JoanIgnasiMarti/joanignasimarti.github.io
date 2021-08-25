@@ -17,7 +17,7 @@ function draw(){
         noStroke();
         fill(255);
       }
-      square(i*caja,j*caja,caja,caja/3);
+      rect(i*caja,j*caja,caja,caja,caja/3);
     };
   };
   noStroke;
