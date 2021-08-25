@@ -1,4 +1,4 @@
-log("testing");
+console.log("testing");
 let caja = 32;
 let factor = 0.6;
 function setup(){
