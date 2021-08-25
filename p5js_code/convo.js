@@ -1,18 +1,18 @@
 let caja = 32;
 let factor = 0.6;
-curX = 0;
-curY = 0;
+let curX = 0;
+let curY = 0;
+let kpr = 0;
+
 function setup(){
   let wid = int(windowWidth*factor/caja)*caja;
   let hei = int(windowHeight*factor/caja)*caja;
   createCanvas(wid, hei);
 };
+function keyPressed(){
+  kpr = keyCode;
+};
 function draw(){
-  let kpr = 0;
-  if (keyIsPressed){
-    console.log(keyCode);
-    kpr = keyCode
-  }
   if (kpr == 37 && curX>0){
     curX--;
   }
@@ -25,6 +25,7 @@ function draw(){
   else if(kpr == 40 && curY < int(displayHeight/caja)){
     curY++;
   }
+  kpr = 0;
   background(0);
   for (let i=0;i<int(displayWidth/caja);i++){
     for (let j=0;j<int(displayHeight/caja);j++){
