@@ -8,6 +8,9 @@ function setup(){
   createCanvas(wid, hei);
 };
 function draw(){
+  if (keyIsPressed){
+    console.log(keyCode);
+  }
   if (keyCode == 37 && curX>0){
     curX--;
   }
