@@ -1,0 +1,45 @@
+var caja = 32;
+var curX = 0;
+var curY = 0;
+var canJump = true;
+var step = 0;
+var fps = 60;
+function setup() {
+  noCursor();
+  createCanvas(320, 320);
+  frameRate(fps);
+}
+
+function draw() {
+  if (step > fps){
+    step -= fps;
+    canJump = true;
+    fps -= 1;
+  }
+  stroke(125);
+  text(fps,curX,curY);
+  step += 1;
+  background(0);
+  noStroke();
+  fill (255);
+  square(curX,curY,caja,caja/3);
+    if (canJump && keyIsPressed){
+      canJump = false;
+      if (keyCode == 37){
+        curX -=caja;
+      }
+      else if (keyCode == 38){
+        curY -=caja;
+      }
+      else if (keyCode == 39){
+        curX += caja;
+      }
+      else if (keyCode ==40){
+        curY += caja;
+      }
+  }
+  else if(canJump){
+    canJump = false;
+    curX -= caja;
+  }
+}
